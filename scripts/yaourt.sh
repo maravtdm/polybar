@@ -1,5 +1,5 @@
 #!/bin/sh
-iface_up=$(iwconfig wlp1s0 | grep ESSID | cut -d":" -f2 | cut -d"/" -f1)
+iface_up=$(iwconfig wlp1s0 | awk '/SSID/ {print $4}' | cut -d"\"" -f2)
 #?
 if [ ${iface_up} != "off" ]; then 
 	wrapper=yay
