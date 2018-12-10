@@ -431,7 +431,7 @@ ramp-foreground = #FFFFFF
 [module/yaourt]
 type = custom/script
 exec = $HOME/.config/polybar/scripts/yaourt.sh
-interval = 300
+interval = 1800
 format-prefix = " "
 format-underline = #55aa55
 format-prefix-foreground = #FFFFFF
