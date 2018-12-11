@@ -16,6 +16,5 @@ if [[ ${iface_up} != "off" ]]; then
 		fi
 	fi
 else
-#		echo ""
-		echo ${iface_up}
+		echo ""
 fi
