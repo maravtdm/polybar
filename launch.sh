@@ -12,6 +12,11 @@ done
 m=$(xrandr -q | grep "HDMI1" | awk '{print $1}')
 status=$(xrandr -q | grep "HDMI1" | awk '{print $2}')
 
+mega_pid=$(pgrep mega)
+if [[ ! -z ${mega_pid} ]]; then
+	kill ${mega_pid}
+fi
+
 if [ "$status" == "connected" ]; then
 	m="HDMI1"
 	MONITOR=$m polybar --reload top &
@@ -24,3 +29,4 @@ else
 #       MONITOR=$m polybar -l info --reload bottom > ~/.config/polybar/bottom.log 2>&1 &
 #        MONITOR=$m polybar --reload bottom &
 fi
+megasync &
