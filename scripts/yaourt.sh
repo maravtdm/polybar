@@ -3,7 +3,7 @@ iface_up=$(iwconfig wlp1s0 | awk '/SSID/ {print $4}' | cut -d"\"" -f2)
 #?
 if [ ${iface_up} != "off" ]; then 
 	connect=$(fping arch.yourlabs.org | awk '{print $3}' >/dev/null 2>&1)
-	if [ $connect != "alive" ]; then
+	if [ $connect !== "alive" ]; then
 		echo ""
 	else
 		wrapper=yay
