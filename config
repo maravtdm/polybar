@@ -369,12 +369,17 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 interval = 120
+poll-interval = 5
+time-format = %H:%M
 
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
+label-charging = %percentage%% (%time%)
 
 format-discharging = <animation-discharging> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
+label-discharging = %percentage%% (%time%)
+
 
 format-full-prefix = "  "
 format-full-prefix-foreground = #FFFFFF
