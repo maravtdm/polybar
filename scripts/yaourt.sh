@@ -1,9 +1,11 @@
 #!/bin/sh
+
 iface_up=$(iwconfig wlp1s0 | awk -F":" '/ESSID/ {print $2}' | cut -d"/" -f1)
 
 if [[ ${iface_up} != "off" ]]; then 
-	connect=$(fping arch.yourlabs.org | awk '{print $3}') >/dev/null 2>&1
-	if [[ ${connect} != "alive" ]]; then
+	fping -c1 1.1.1.1 >/dev/null 2>&1
+	connect=$?
+	if [[ ${connect} == "1" ]]; then
 		echo ""
 	else
 		wrapper=yay
