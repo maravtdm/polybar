@@ -27,3 +27,4 @@ else
 	MONITOR=$m polybar --reload top &
 #	MONITOR=$m polybar -l info --reload top > $HOME/.config/polybar/top.log 2>&1 &
 fi
+megasync &
