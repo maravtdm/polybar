@@ -274,14 +274,14 @@ format-disconnected-prefix = " "
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 30
 
 date =
 ;date-alt = " %a %d %b" 
 ;%Y-%m-%d"
 
 time = %{A3:zenity --calendar --text="":}%H:%M%{A}
-time-alt = " %a %d %b  %H:%M:%S"
+time-alt = " %a %d %b"
 
 format-prefix = 
 format-prefix-foreground = #FFFFFF
