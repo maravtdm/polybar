@@ -38,6 +38,7 @@ height = 22
 radius = 6.0
 fixed-center = false
 bottom = true
+locale = fr_FR.UTF-8
 
 background = ${colors.background1}
 foreground = ${colors.foreground}
